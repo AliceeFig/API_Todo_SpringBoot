@@ -1,6 +1,6 @@
 # 📋 Todo List - Spring Boot
 
-Um projeto simples de **lista de tarefas (Todo List)** desenvolvido com **Java 17** e **Spring Boot** para o minicurso **Construindo uma API com spring Boot** da SNCT.
+Um projeto simples de **lista de tarefas (Todo List)** desenvolvido com **Java 17** e **Spring Boot** para o minicurso **Construindo uma ToDo List com spring Boot** da SNCT.
 
 ## 🚀 Tecnologias utilizadas
 - Java 17
@@ -8,7 +8,7 @@ Um projeto simples de **lista de tarefas (Todo List)** desenvolvido com **Java 1
 - Spring Data JPA
 - MySQL
 - Maven
-
+- 
 ---
 
 ## ⚙️ Como rodar o projeto
@@ -19,7 +19,6 @@ git clone https://github.com/seu-usuario/nome-do-repo.git
 cd nome-do-repo
 ```
 ---
-
 ### 2. Configurar banco de dados
 ```
 spring.datasource.url=jdbc:mysql://localhost:3306/todolist
@@ -28,67 +27,65 @@ spring.datasource.password=sua_senha
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 ```
-
 ---
-
-### 3. Como rodar o projeto 
+### 3. Rodar a aplicação 
 ```
 mvn spring-boot:run
 ```
-
 ---
 
-### 📌 Endpoints da API
+## 📌 Endpoints da API
 ---
-## Criar uma tarefa
+### Criar uma tarefa
 
-POST /api/todos
+#### POST /api/todos
 Body (JSON):
-
+```
 {
   "title": "Estudar Spring Boot"
 }
+```
 ---
-## Listar todas as tarefas
+### Listar todas as tarefas
 
-GET /api/todos
+#### GET /api/todos
 ----
-## Atualizar uma tarefa
+### Atualizar uma tarefa
 
-PUT /api/todos/{id}
+#### PUT /api/todos/{id}
 Body (JSON):
-
+```
 {
   "title": "Estudar Spring Boot - atualizado",
   "completed": true
 }
+```
 ---
-## Deletar uma tarefa
+### Deletar uma tarefa
 
-DELETE /api/todos/{id}
----
-
-### 🧪 Testando com o Postman
+#### DELETE /api/todos/{id}]
 ---
 
-## Abra o Postman e crie uma nova Collection chamada Todo List.
+## 🧪 Testando com o Postman
+---
+### Abra o Postman e crie uma nova Collection chamada Todo List.
+---
+## Adicione as seguintes requisições:
 
-##Adicione as seguintes requisições:
+#### POST http://localhost:8080/api/todos
+#### → Envie no Body (JSON) o título da tarefa.
 
-POST http://localhost:8080/api/todos
-→ Envie no Body (JSON) o título da tarefa.
+#### GET http://localhost:8080/api/todos
+#### → Retorna todas as tarefas cadastradas.
 
-GET http://localhost:8080/api/todos
-→ Retorna todas as tarefas cadastradas.
+#### PUT http://localhost:8080/api/todos/{id}
+#### → Atualiza uma tarefa específica passando o id.
 
-PUT http://localhost:8080/api/todos/{id}
-→ Atualiza uma tarefa específica passando o id.
+#### DELETE http://localhost:8080/api/todos/{id}
+#### → Remove uma tarefa do banco.
 
-DELETE http://localhost:8080/api/todos/{id}
-→ Remove uma tarefa do banco.
-
-# Clique em Send em cada requisição e observe as respostas no painel inferior do Postman.
+### ! Clique em Send em cada requisição e observe as respostas no painel inferior do Postman.
 
 ## ✨ Autor
-#AliceeFig
+### @AliceeFig
 
