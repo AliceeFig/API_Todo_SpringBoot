@@ -8,7 +8,7 @@ Um projeto simples de **lista de tarefas (Todo List)** desenvolvido com **Java 1
 - Spring Data JPA
 - MySQL
 - Maven
-- 
+- Postman
 ---
 
 ## ⚙️ Como rodar o projeto
